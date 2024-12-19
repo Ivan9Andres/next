@@ -2,20 +2,81 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+.navbar-menu li {
+  margin: 0 15px;
+}
+
+.navbar-menu a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+}
+
+.navbar-menu a:hover {
+  border-bottom: 2px solid #fff;
+}
+
+
+
+/* Botones */
+.navbar-buttons .btn-signin,
+.navbar-buttons .btn-register {
+  margin: 0 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.navbar-buttons .btn-signin {
+  background-color: transparent;
+  color: #1619e9;
+
+}
+
+.navbar-buttons .btn-signin:hover {
+  background-color: #fff;
+  color: #333;
+}
+
+.navbar-buttons .btn-register {
+  background-color: #3c12f7;
+  color: #fff;
+}
+
+.navbar-buttons .btn-register:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-menu {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .navbar-menu li {
+    margin: 10px 0;
+  }
+
+  .navbar-settings,
+  .navbar-buttons {
+    margin-top: 10px;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+.estudio {
+  background-color: #000000;
 }
